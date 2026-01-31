@@ -1,0 +1,92 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Classroom Movies</title>
+
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#0b0b0b;color:white}
+header{text-align:center;padding:20px;background:#111}
+header h1{margin:0;font-size:2.5rem}
+header p{color:#aaa}
+main{padding:20px}
+h2{margin-top:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px}
+.card{background:#161616;padding:15px;border-radius:12px;text-align:center;color:white;text-decoration:none;cursor:pointer;transition:.2s;font-size:16px}
+.card:hover{transform:scale(1.05);background:#1f1f1f}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);align-items:center;justify-content:center;z-index:1000}
+.modal-content{background:#141414;padding:25px;border-radius:14px;width:300px;text-align:center}
+.modal-content button{width:100%;margin:8px 0;padding:12px;border-radius:10px;border:none;background:red;color:white;font-size:16px;cursor:pointer}
+.close{background:#333}
+</style>
+</head>
+
+<body>
+<header>
+<h1>Classroom Movies</h1>
+<p>Shows & Movies</p>
+</header>
+
+<main>
+<section>
+<h2>TV Shows</h2>
+<div class="grid">
+<a class="card" href="https://drive.google.com/drive/folders/1PzKaoaK4blzlaoxnwC20gZoeYE5mDxWL?usp=sharing" target="_blank">South Park</a>
+<a class="card" href="https://drive.google.com/drive/folders/1ZtFBjPAE-qVzdHJ3EKnvlBFNhux5m3Hi?usp=sharing" target="_blank">The Simpsons</a>
+<button class="card" onclick="openHazbin()">Hazbin Hotel</button>
+<a class="card" href="https://drive.google.com/drive/folders/11W6C-Jqv9iQVasqjfiaYz77puax1UTjH?usp=sharing" target="_blank">Family Guy</a>
+<a class="card" href="https://drive.google.com/drive/folders/1v7MZOeevSOj_sU46doOrU-ELYNFg-FDa?usp=sharing" target="_blank">Stranger Things</a>
+<a class="card" href="https://drive.google.com/drive/folders/1UABFLoCQG6DEdQkJwbbUPqYulGLsSiw2?usp=sharing" target="_blank">IT: Welcome to Derry</a>
+<a class="card" href="https://drive.google.com/drive/folders/1ujarzaX_90FGOiRC15OmXOAgwSbdI_kA?usp=sharing" target="_blank">The Boondocks</a>
+<a class="card" href="https://drive.google.com/drive/folders/1OXgcS7q8GexG3oOHxSMDuNYfUo-BMVxq?usp=sharing" target="_blank">Amazing World of Gumball</a>
+<a class="card" href="https://drive.google.com/drive/folders/1QpqcZWVMlzIru0g8xf5olhMeY75YKJkk?usp=sharing" target="_blank">SpongeBob SquarePants</a>
+<a class="card" href="https://sites.google.com/view/novashower/sho%C5%B5s/young-sheldon" target="_blank">Young Sheldon</a>
+<a class="card" href="https://sites.google.com/view/novashower/sho%C5%B5s/murder-drones" target="_blank">Murder Drones</a>
+<a class="card" href="https://drive.google.com/drive/folders/1RUZj9WQzdEBYYLeKhD_Y9GRcZbNZMSEy?usp=sharing" target="_blank">Everybody Hates Chris</a>
+<a class="card" href="https://drive.google.com/drive/folders/1pwRkHjJJbk8-JRH2Mh8v5ouXdyE7pxfM?usp=sharing" target="_blank">Big City Greens</a>
+<a class="card" href="https://drive.google.com/drive/folders/171edneN1aUZioCLPzxoXlORjcgaAs0sZ?usp=sharing" target="_blank">Legends of Chamberlain Heights</a>
+<a class="card" href="https://drive.google.com/drive/folders/1-3bvig0shGLbxH7VyLVp0XAnJ9SgahJ4?usp=sharing" target="_blank">American Dad</a>
+</div>
+</section>
+
+<section>
+<h2>Movies</h2>
+<div class="grid">
+<a class="card" href="https://drive.google.com/file/d/1rKRsgdNioFs3rtkZai7Gz97FtAX0jdJ_/view" target="_blank">Diary of a Wimpy Kid</a>
+<a class="card" href="https://drive.google.com/file/d/1aXHiOSQjs7rCj933p22WnVSHOsVnv7IB/view" target="_blank">Dog Man</a>
+<a class="card" href="https://sites.google.com/view/8tsr/movies-holder/fnaf-movie" target="_blank">Five Nights at Freddy's</a>
+<a class="card" href="https://drive.google.com/file/d/1dW1XsOWtiL0mGHOFIB8n0rEhLPoa2buJ/view" target="_blank">Five Nights at Freddy's 2</a>
+<a class="card" href="https://drive.google.com/file/d/1T5xeDfwFXqP0WJMExe3nwnwHgUozfXK2/view" target="_blank">IT Chapter 1</a>
+<a class="card" href="https://drive.google.com/file/d/1vLFTFzlvu9TJXbcL40gnag9Xart3pKQI/view" target="_blank">IT Chapter 2</a>
+</div>
+</section>
+
+<section>
+<h2>Anime</h2>
+<div class="grid">
+<a class="card" href="https://drive.google.com/drive/folders/1pdu3zkAPeF4o-tyPe-HsKhAiIZxBrqKS" target="_blank">Naruto</a>
+<a class="card" href="https://drive.google.com/drive/folders/1gvqxyzUzlH_xjNA13NCj0jmnc-KwqTfQ" target="_blank">Naruto Shippuden</a>
+<a class="card" href="https://drive.google.com/drive/folders/1gepZkTNEQ7wo5cxNlv8Z8V-fSB2LYV4O" target="_blank">My Hero Academia</a>
+<a class="card" href="https://drive.google.com/drive/folders/1wEIKR6tfqDsnhFu_Geowz8YdgoGp0Rhk" target="_blank">JJK Season 3</a>
+<a class="card" href="https://drive.google.com/drive/folders/1I7-ZUInlg9jb4R6LGq0qX3n7bjGKPFFO" target="_blank">Pokémon</a>
+</div>
+</section>
+</main>
+
+<div id="hazbinModal" class="modal">
+<div class="modal-content">
+<h3>Hazbin Hotel</h3>
+<button onclick="window.open('https://drive.google.com','_blank')">Season 1</button>
+<button onclick="window.open('https://drive.google.com','_blank')">Season 2</button>
+<button class="close" onclick="closeHazbin()">Close</button>
+</div>
+</div>
+
+<script>
+function openHazbin(){document.getElementById("hazbinModal").style.display="flex"}
+function closeHazbin(){document.getElementById("hazbinModal").style.display="none"}
+</script>
+
+</body>
+</html>
